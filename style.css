@@ -1,0 +1,88 @@
+/*============= RESET ========================*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*=============    VARIABLES     ========================*/
+:root{
+    --header-height: 4.5rem;
+
+    /* colors */
+    --hue: 159;
+    /* HSL Color Mode */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+    /* fonts */
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1rem;
+
+    --title-font: 'Poppins', sans-serif;
+    --body-font: 'DM Sans', sans-serif;
+}
+/*=============   BASE   ========================*/
+body{
+    font: 400 1rem var(--body-font);
+    color: var(--text-color);
+    background: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+}
+.title{
+    font: 700 var(--title-font-size) var(--title-font);
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+.button{
+    background: var(--base-color);
+    color: var(--text-color-light);
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    font: 500 1rem "DM Sans", sans-serif;
+}
+.button:hover{
+    background: var(--base-color-alt);
+}
+/*============= LAYOUT ========================*/
+.container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.grid{
+    display: grid;
+    gap: 2rem;
+}
+.section{
+    padding: calc(5rem + var(--header-height)) 0;
+}
+.section .title{
+    margin-bottom: 1rem;
+}
+.section .subtitle{
+    font-size: var(--subtitle-font-size);
+}
+.section header{
+    margin-bottom: 4rem;
+}
+.section header strong{
+    color: var(--base-color);
+}
+/*============= SHOW ========================*/
+

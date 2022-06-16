@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+
+    <!-- STYLES -->
+    <link href="./style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+      <section class="section" id="inicio">
+        <div class="container grid">
+
+          <h2 class="title"> Jogo de Adivinhação </h2>
+          <!-- parte do NOME -->
+          <div class="card-nome" id="nome .show">
+            <p class="subtitle">Digite Seu nome:</p>
+            <input type="text" id="nome"/><br>
+            <button type="submit" class="button" onclick="btnNome()">Iniciar</button>
+          </div>
+
+          <!-- parte do NIVEL -->
+          <div class="card-nivel" id="nivel .show">
+            <p class="subtitle">Escolha o Nivel:</p>
+            <div>
+              <input type="radio" id="nivel1" name="nivel" value="1" checked="checked">
+              <label for="nivel1">Nivel 1</label>
+            </div>
+            <div>
+              <input type="radio" id="nivel2" name="nivel" value="2">
+              <label for="nivel2">Nivel 2</label>
+            </div>
+            <button type="submit" class="button" onclick="btnNivel()">Confirmar</button>
+          </div>
+
+           <!-- parte do Jogo -->
+           <div class="card-nome" id="nome .show">
+            <p class="subtitle">Digite um Numero:</p>
+            <input type="text" id="numero"/><br>
+            <button type="submit" class="button" onclick="btnJogar()">Confirmar</button>
+            <h2 class="resultado" id="resultado"></h2>
+            <h2 class="chances" id="chances"></h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+
+</html>
