@@ -21,9 +21,10 @@ a{
     --base-color-second: hsl(var(--hue) 65% 88%);
     --base-color-alt: hsl(var(--hue) 57% 53%);
     --title-color: hsl(var(--hue) 41% 10%);
-    --text-color: hsl(0 0% 46%);
-    --text-color-light: hsl(0 0% 98%);
-    --body-color: hsl(0 0% 98%);
+    --text-color: rgb(35, 35, 35);
+    --text-color-light: rgb(32, 32, 32);
+    --body-color: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    /*linear-gradient(45deg, #495371, #74959a, #98b4aa, #f1e0ac);*/
     /* fonts */
     --title-font-size: 1.875rem;
     --subtitle-font-size: 1rem;
@@ -35,8 +36,26 @@ a{
 body{
     font: 400 1rem var(--body-font);
     color: var(--text-color);
+    height: 100vh;
+    width: 100vw;
     background: var(--body-color);
+    background-repeat: no-repeat;
+    background-size: 300%, 300%;
+    animation: colors 15s ease infinite;
     -webkit-font-smoothing: antialiased;
+    -webkit-animation: colors 15s ease infinite;
+}
+    /* animation */
+@keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }
 .title{
     font: 700 var(--title-font-size) var(--title-font);
@@ -46,10 +65,10 @@ body{
 .button{
     background: var(--base-color);
     color: var(--text-color-light);
-    height: 3rem;
+    height: 1rem;
     display: inline-flex;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0.25rem;
     -webkit-border-radius: 0.25rem;
     -moz-border-radius: 0.25rem;
@@ -78,11 +97,35 @@ body{
 .section .subtitle{
     font-size: var(--subtitle-font-size);
 }
-.section header{
-    margin-bottom: 4rem;
-}
-.section header strong{
-    color: var(--base-color);
-}
 /*============= SHOW ========================*/
-
+.card{
+    display: none;
+}
+.card.show {
+    display: block;
+}
+#inicio{
+    text-align: center;
+}
+#cardMain{
+    text-align: center;
+    margin: auto;
+    height: 13rem;
+    width: 25rem;
+    padding-top: 2rem;
+    background: rgba(255, 255, 255);
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+}
+#cardMain .button{
+    margin-top: 1.5rem;
+}
+#texto{
+    height: 2.75rem;
+}

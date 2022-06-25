@@ -17,18 +17,21 @@
       <section class="section" id="inicio">
         <div class="container grid">
 
-          <h2 class="title"> Jogo de Adivinhação </h2>
-          <h2 class="chances" id="nomeText"></h2>
-          <h2 class="chances" id="messageText"></h2>
+          <h2 class="title"> 👾 | Jogo de Adivinhação | 👾</h2>
+          <div id="texto">
+          <h3 class="chances" id="nomeText"></h3>
+          <h3 class="chances" id="messageText"></h3>
+          </div>
+
           <!-- parte do NOME -->
-          <div class="card .show" id="mainNome">
+          <div class="card nome show" id="cardMain">
             <p class="subtitle">Digite Seu nome:</p>
             <input type="text" id="nome"/><br>
             <button type="submit" class="button" onclick="btnNome()">Iniciar</button>
           </div>
 
           <!-- parte do NIVEL -->
-          <div class="card .show" id="mainNivel">
+          <div class="card nivel" id="cardMain">
             <p class="subtitle">Escolha o Nivel:</p>
             <div>
               <input type="radio" id="nivel1" name="nivel" value="1" checked="checked">
@@ -42,12 +45,14 @@
           </div>
 
            <!-- parte do Jogo -->
-           <div class="card .show" id="mainJogo">
+           <div class="card jogo" id="cardMain">
             <p class="subtitle">Digite um Numero:</p>
+            <p  id="espaco"></p>
             <input type="text" id="numero"/><br>
             <button type="submit" class="button" id="inputJogo" onclick="btnJogar()">Confirmar</button>
-            <h2 class="resultado" id="resultado"></h2>
-            <h2 class="chances" id="chancesText"></h2>
+            <button type="submit" class="button" id="resetJogo" onclick="btnReset()">Resetar</button>
+            <h3 class="resultado" id="resultado"></h3>
+            <h3 class="chances" id="chancesText"></h3>
           </div>
         </div>
       </section>
