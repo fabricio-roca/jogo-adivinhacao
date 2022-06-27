@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Adivinhação</title>
 
+    <!--    ICONS    -->
+    <link href="icon/style.css" rel="stylesheet">
     <!-- STYLES -->
     <link href="./style.css" rel="stylesheet">
   </head>
@@ -33,11 +35,11 @@
           <!-- parte do NIVEL -->
           <div class="card nivel" id="cardMain">
             <p class="subtitle">Escolha o Nivel:</p>
-            <div>
+            <div id="texto-escolha">
               <input type="radio" id="nivel1" name="nivel" value="1" checked="checked">
               <label for="nivel1">Nivel 1 - 5 tentativas.</label>
             </div>
-            <div>
+            <div id="texto-escolha">
               <input type="radio" id="nivel2" name="nivel" value="2">
               <label for="nivel2">Nivel 2  - 10 tentativas.</label>
             </div>
@@ -51,13 +53,27 @@
             <input type="text" id="numero"/><br>
             <button type="submit" class="button" id="inputJogo" onclick="btnJogar()">Confirmar</button>
             <button type="submit" class="button" id="resetJogo" onclick="btnReset()">Resetar</button>
-            <h3 class="resultado" id="resultado"></h3>
-            <h3 class="chances" id="chancesText"></h3>
+          </div>
+          <div id="texto">
+          <h3 class="resultado" id="resultado"></h3>
+          <h3 class="chances" id="chancesText"></h3>
           </div>
         </div>
       </section>
+      <div class="divider"></div>
     </main>
+
+    <footer>
+      <div class="container grid">
+        <div class="social grid">
+          <a href="https://github.com/fabricio-roca/jogo-adivinhacao" target="_blank">
+              <i class="icon-github"></i> Github</a>
+          <a href="https://www.linkedin.com/in/fabricio-roca/" target="_blank">
+              <i class="icon-linkedin"></i> Linkedin</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="./main.js"></script>
   </body>
-
 </html>
