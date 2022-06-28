@@ -88,6 +88,7 @@ btnNivel = function () {
 btnJogar = function () {
   if (front.inputs.numero.value == numberSecretor) {
     front.outputs.resultadoHtml.innerHTML = "Você acertou! o numero é " + numberSecretor;
+    front.outputs.chancesHtml.innerHTML = "";
     console.log("Acertou");
     fimJogo();
   }else {
